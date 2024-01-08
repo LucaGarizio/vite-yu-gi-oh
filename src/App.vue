@@ -1,4 +1,5 @@
 <script>
+// importa axios
 import axios from 'axios'
 
 import AppHeader from './components/AppHeader.vue'
@@ -25,8 +26,8 @@ export default{
       axios
         .get(store.apiURL)
         .then((res=> { 
-          console.log(res.data);
-          store.getCards = res.data.meta;
+          // console.log(res.data.data);
+          store.getCards = res.data.data;
         }))
     }
   },

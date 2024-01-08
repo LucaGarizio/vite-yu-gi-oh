@@ -6,12 +6,13 @@ export default{
 </script>
 
 <template>
- <div class="container">
+  <div class="container">
     <div class="row">
       <img src="/src/assets/img/Yugioh_anime_logo.webp" alt="">
       <h1>Yu-Gi-Oh Api</h1>
     </div>
- </div>
+   
+  </div>
  
 </template>
 

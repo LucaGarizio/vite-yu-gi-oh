@@ -11,12 +11,22 @@ import CardList from './CardList.vue';
 </script>
 
 <template>
-   <div class="container">
-        <div class="row-found">
-            <h2>Found 39 cards</h2>
+  <div class="row-option">
+    <select name="" id="">
+      <option value=""></option>
+      <option value="">Alien</option>
+      <option value="">Spell</option>
+      <option value="">Infernoble Arms</option>
+      <option value="">Noble Knight</option>
+      <option value="">Archfiend</option>
+    </select>
+  </div>
+  <div class="container">
+    <div class="row-found">
+      <h3>Found 39 cards</h3>
         </div>
         <div class="card-box">
-            <CardList/>
+          <CardList/>
         </div>     
    </div>
 </template>
@@ -25,21 +35,28 @@ import CardList from './CardList.vue';
 @use'../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *; 
 
+.row-option{
+  width: 88%;
+  margin: 20px auto;
+    select{
+      padding: 10px; 
+      width: 200px; 
+      font-size: 15px;
+    }
+}
 .container{
     width: 90%;
     background-color: white;
-    margin: 100px auto;
-    padding: 50px 20px;
+    margin: 0 auto 20px;
+    padding: 70px 0 45px;
 }
 
 .row-found{
     width: 90%;
-    margin: 40px auto 0;
-    padding: 25px;
+    margin: 0 auto;
+    padding: 20px;
     background-color: #212529;
     color: white;
 }
-
-
 
 </style>

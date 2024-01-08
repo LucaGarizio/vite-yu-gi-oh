@@ -10,10 +10,10 @@ export default{
 
 <template>
     <div class="card-box">
-        <img src="https://images.ygoprodeck.com/images/cards/34541863.jpg" alt="">
+        <img :src="info.card_images[0].image_url" alt="{{ info.name }}">
         <div class="info">
-            <h3>Nome Carta</h3>
-            <h4>Alien</h4>
+            <h3>{{ info.name }}</h3>
+            <h4>{{ info.archetype }}</h4>
         </div>
     </div>
 </template>
@@ -25,20 +25,20 @@ export default{
 
 
 .card-box{
-            background-color: #d48f38;
-        }
+    background-color: #d48f38;
+}
 
-        img{
-            width: 100%;
-        }
+img{
+    width: 100%;
+    }
 
-        h3{
-            padding: 20px 0;
-            color: white;
-        }
+    h3{
+        padding: 20px 0;
+        color: white;
+    }
 
-        h4{
-            padding-bottom: 20px;
-            font-weight: normal;
-        }
+    h4{
+        margin-bottom: 20px;
+        font-weight: normal;
+    }
 </style>

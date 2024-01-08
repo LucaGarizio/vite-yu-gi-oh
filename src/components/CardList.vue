@@ -16,7 +16,6 @@ export default{
   }
 }
 
-
 </script>
 
 <template>
@@ -45,6 +44,7 @@ export default{
         border: 1px solid black;
         flex-basis: 18%;
         margin-bottom: 25px;
+        background-color: #d48f38;
     }
 }
 
