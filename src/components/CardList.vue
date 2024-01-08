@@ -41,9 +41,8 @@ export default{
     text-align: center;
     
     .col{
-        border: 1px solid black;
         flex-basis: 18%;
-        margin-bottom: 25px;
+        margin-bottom: 30px;
         background-color: #d48f38;
     }
 }

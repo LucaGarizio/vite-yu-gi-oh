@@ -10,7 +10,7 @@ export default{
 
 <template>
     <div class="card-box">
-        <img :src="info.card_images[0].image_url" alt="{{ info.name }}">
+        <img :src="info.card_images[0].image_url" :alt="info.name">
         <div class="info">
             <h3>{{ info.name }}</h3>
             <h4>{{ info.archetype }}</h4>
@@ -21,8 +21,6 @@ export default{
 <style lang="scss" scoped>
 @use'../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *; 
-
-
 
 .card-box{
     background-color: #d48f38;

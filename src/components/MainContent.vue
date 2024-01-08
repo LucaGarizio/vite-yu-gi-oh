@@ -1,12 +1,36 @@
 <script>
+// importa axios
+import axios from 'axios'
+
+import CardList from './CardList.vue';
+
+import { store } from "../store"
+
 export default{
   name: "MainContent",
   components:{
     CardList
+  },
+  data(){
+    return {
+      store,
+    }
+  },
+  methods: {
+    getCards() {
+      axios.get(store.api)
+        .then((res => { 
+          console.log(res.data.data);
+          store.getCards = res.data.data;
+        }))
+    }
+  },
+  created() {
+    this.getCards();
   }
 }
 
-import CardList from './CardList.vue';
+
 
 </script>
 
@@ -22,7 +46,7 @@ import CardList from './CardList.vue';
     </select>
   </div>
   <div class="container">
-    <div class="row-found">
+    <div class="row-find">
       <h3>Found 39 cards</h3>
         </div>
         <div class="card-box">
@@ -48,15 +72,14 @@ import CardList from './CardList.vue';
     width: 90%;
     background-color: white;
     margin: 0 auto 20px;
-    padding: 70px 0 45px;
+    padding: 70px 0 40px;
 }
 
-.row-found{
+.row-find{
     width: 90%;
     margin: 0 auto;
     padding: 20px;
     background-color: #212529;
     color: white;
 }
-
 </style>

@@ -1,13 +1,12 @@
 <script>
-// importa axios
-import axios from 'axios'
+
 
 import AppHeader from './components/AppHeader.vue'
 import MainContent from './components/MainContent.vue'
 import CardList from './components/CardList.vue'
 
 
-import { store } from "./store";
+
 
 
 export default{
@@ -15,24 +14,6 @@ export default{
     AppHeader,
     MainContent,
     CardList
-  },
-  data(){
-    return {
-      store,
-    }
-  },
-  methods: {
-    getCards() {
-      axios
-        .get(store.apiURL)
-        .then((res=> { 
-          // console.log(res.data.data);
-          store.getCards = res.data.data;
-        }))
-    }
-  },
-  created() {
-    this.getCards();
   }
 }
 </script>
