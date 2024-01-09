@@ -12,7 +12,7 @@ export default {
 <template>
 	<div class="container">
 		<div class="row-find">
-			<h3>Found 39 cards</h3>
+			<h3>Found 39 Cards</h3>
 		</div>
 		<div class="card-box">
 			<CardList />

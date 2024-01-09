@@ -26,9 +26,18 @@ export default {
 <template>
 	<div class="row-option">
 		<label for="search"></label>
-		<select name="" id="search" @change="$emit('search')">
+		<select
+			v-model="store.selectedType"
+			name=""
+			id="search"
+			@change="$emit('search')"
+		>
 			<option value="">Select Type</option>
-			<option v-for="(cardType, i) in store.getType" :key="i" value="">
+			<option
+				v-for="(cardType, i) in store.getType"
+				:key="i"
+				:value="cardType.archetype_name"
+			>
 				{{ cardType.archetype_name }}
 			</option>
 		</select>
