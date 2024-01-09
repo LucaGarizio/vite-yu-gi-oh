@@ -2,17 +2,18 @@
 export default{
   name: "AppHeader"
 }
-
 </script>
+
 
 <template>
   <div class="container">
     <div class="row">
-      <img src="/src/assets/img/Yugioh_anime_logo.webp" alt="">
+      <img src="/src/assets/img/Yugioh_anime_logo.webp" alt="logo">
       <h1>Yu-Gi-Oh Api</h1>
     </div> 
   </div>
 </template>
+
 
 <style lang="scss" scoped>
 @use'../styles/partials/variables' as *;
@@ -34,10 +35,8 @@ export default{
   }
 
   h1{
-    font-size: 50px;
+    font-size: 35px;
     font-weight: 300;
   }
 }
-
-
 </style>

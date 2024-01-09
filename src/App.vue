@@ -1,31 +1,50 @@
 <script>
 
-
 import AppHeader from './components/AppHeader.vue'
+import AppSearch from './components/AppSearch.vue'
 import MainContent from './components/MainContent.vue'
-import CardList from './components/CardList.vue'
 
-
-
-
+// importa axios
+import axios from 'axios'
+import { store } from "./store"
 
 export default{
   components: {
     AppHeader,
-    MainContent,
-    CardList
+    AppSearch,
+    MainContent
+  },
+  data(){
+    return {
+      store,
+    }
+  },
+  methods: {
+    getCards() {
+      axios.get(store.api)
+        .then((res => { 
+          console.log(res.data.data);
+          store.getCards = res.data.data;
+        }))
+    }
+  },
+  created() {
+    this.getCards();
   }
 }
 </script>
+
 
 <template>
   <header>
     <AppHeader />
   </header>
   <main>
+    <AppSearch />
     <MainContent/>
   </main>
 </template>
+
 
 <style lang="scss">
 @use './styles/partials/variables' as *;

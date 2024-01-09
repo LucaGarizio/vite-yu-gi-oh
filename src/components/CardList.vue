@@ -15,8 +15,8 @@ export default{
     }
   }
 }
-
 </script>
+
 
 <template>
   <div class="cards-container">
@@ -25,6 +25,7 @@ export default{
       </div>
   </div>   
 </template>
+
 
 <style lang="scss" scoped>
 @use'../styles/partials/variables' as *;
@@ -46,5 +47,4 @@ export default{
         background-color: #d48f38;
     }
 }
-
 </style>

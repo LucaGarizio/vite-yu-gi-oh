@@ -5,8 +5,8 @@ export default{
     info: Object,
   }
 }
-
 </script>
+
 
 <template>
     <div class="card-box">
@@ -18,6 +18,7 @@ export default{
     </div>
 </template>
 
+
 <style lang="scss" scoped>
 @use'../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *; 
@@ -28,15 +29,16 @@ export default{
 
 img{
     width: 100%;
-    }
+}
 
-    h3{
-        padding: 20px 0;
-        color: white;
-    }
+h3{
+    padding: 20px 3px;
+    color: white;
+}
 
-    h4{
-        margin-bottom: 20px;
-        font-weight: normal;
-    }
+h4{
+    margin-bottom: 20px;
+    font-weight: normal;
+    padding: 0 5px;
+}
 </style>
